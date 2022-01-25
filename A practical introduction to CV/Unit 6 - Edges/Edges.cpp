@@ -3,7 +3,7 @@
 #include "opencv2/imgproc.hpp"
 #include "opencv2/imgcodecs.hpp"
 #include "opencv2/highgui.hpp"
-#include <Utilities.h>
+//#include <Utilities.h>
 
 using namespace cv;
 using std::cout;
@@ -123,6 +123,43 @@ int main(){
 	 * 
 	 */
 	
+	/*
+		Laplacian: first the image has to be gray, then smooth it with gaussianblur, and the apply laplacian method
+
+	*/
+
+	/*Mat laplacian, blurred_image1_gray;
+	
+	
+	GaussianBlur(image, blurred_image1_gray, Size(5,5), 1.5);
+	Laplacian(blurred_image1_gray, laplacian, CV_32F, 3);
+
+	imshow("Gray", blurred_image1_gray);
+    imshow("Laplacian", laplacian);
+
+	waitKey();*/
+
+	/*
+		Canny: first the image has to be gray, then smooth it with gaussianblur, and the apply laplacian method
+
+	*/
+
+	Mat canny1, canny2, canny3, canny4, gray;
+
+	GaussianBlur(image, gray, Size(5,5), 1.5);
+	Canny(gray, canny1, 100, 200);
+	Canny(gray, canny2, 7, 236);
+	Canny(gray, canny3, 7, 100);
+	Canny(gray, canny4, 1, 1);
+
+	imshow("Gray", gray);
+    imshow("Canny1", canny1);
+	imshow("Canny2", canny2);
+	imshow("Canny3", canny3);
+	imshow("Canny4", canny4);
+
+	waitKey();
+
 
 
 }
