@@ -3,7 +3,7 @@
 #include "opencv2/imgproc.hpp"
 #include "opencv2/imgcodecs.hpp"
 #include "opencv2/highgui.hpp"
-//#include <Utilities.h>
+#include <Utilities.h>
 
 using namespace cv;
 using std::cout;
@@ -26,7 +26,7 @@ int main(){
 	 * 
 	 * 
 	 * */
-	/*
+	
 	int kernel_size = 2;
 	Mat kernel = Mat::eye( 2, 2, CV_32FC1 );
 	Point anchor = Point( 0,0 );
@@ -60,7 +60,7 @@ int main(){
     imshow("vertical", roberts_gradient);
 
     waitKey();
-*/
+
 
     /**
      * @SObel detection 
